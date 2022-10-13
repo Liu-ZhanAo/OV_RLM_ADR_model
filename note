@@ -1,1 +1,52 @@
 The data matches the code and needs to be decompressed and re integrated into the same folder before use
+
+C:\Users\86186\Desktop\RLM_Reprogramming_of_lipid_metabolism>tree /f
+卷 Windows-SSD 的文件夹 PATH 列表
+卷序列号为 AEAA-8167
+C:.
+│  .Rhistory
+│
+├─GSE159791
+│      GSE159791_raw_filtered.csv
+│
+├─GSE172016
+│  │  GSE172016_gene.count.annotated.csv
+│  │  GSE172016_organoid.gene.count.txt
+│  │
+│  └─rawdata
+│          GSE172016_gene.count.annotated.txt
+│          GSE172016_gene.count.annotated.txt.gz
+│          GSE172016_organoid.gene.count.txt.gz
+│          GSE172016_paper.pdf
+│
+├─GSE26465
+│      GSE26465_non-normalized.csv
+│      GSE26465_non-normalized.txt
+│
+├─GSE34615
+│  │  doce.csv
+│  │  GPL15048.soft
+│  │  GSE34615_exp.txt
+│  │  GSE34615_note.csv
+│  │  pac.csv
+│  │
+│  └─rawdata
+│          GSE34615_note.txt
+│          GSE34615_series_matrix.txt
+│
+├─GSE60335
+│  │  GPL13287-12092.csv
+│  │  GSE60335_exp.csv
+│  │
+│  └─rawdata
+│          GPL13287-12092.txt
+│          GSE60335_series_matrix.txt
+│
+└─GSE73935
+    │  GPL13667-15572 .csv
+    │  GSE73935_exp.txt
+    │  GSE73935_note.csv
+    │
+    └─rawdata
+            GPL13667-15572 .txt
+            GSE73935_series_matrix.txt
