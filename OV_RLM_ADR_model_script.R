@@ -1825,6 +1825,31 @@ mean(clum3)
 
 summary(fit3)
 
+acc_all<-rep(NA,100)
+
+for(i in 1:100){
+  set.seed(i)
+  allframe<-neu_union
+  allframe<-allframe[sample(length(allframe$ACLY)),]
+  trainframe<-allframe[1:30,]
+  verifyframe<-allframe[31:43,]
+  fit3_train<-glm(label~ACLY+ACACA+SCD+CPT1A+CPT1B,data=trainframe,family = binomial())
+  
+  verifyframe_1<-verifyframe[,c(1,2,5,6,7)]
+  verifyframe_1$result<-predict(fit3_train,verifyframe_1,type="response")
+  verifyframe_1<-cbind(verifyframe_1,verifyframe$label)
+  verifyframe_1$result_1<-NA
+  verifyframe_1$result_1[verifyframe_1$result>0.5]<-1
+  verifyframe_1$result_1[verifyframe_1$result<=0.5]<-0
+  
+  t<-table(verifyframe_1$`verifyframe$label`,verifyframe_1$result_1)
+  t1<-(t[1,1]+t[2,2])/(t[1,1]+t[2,2]+t[1,2]+t[2,1])
+  acc_all[i]<-t1
+}
+
+acc_all
+
+mean(acc_all)
 setwd("C:/Users/86186/Desktop/RLM_Reprogramming_of_lipid_metabolism")
 
 save.image()
